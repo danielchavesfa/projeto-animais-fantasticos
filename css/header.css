@@ -1,5 +1,5 @@
 header {
-    grid-column: 2/-1;
+    grid-column: 3 / -1;
 }
 
 .menu {
@@ -19,9 +19,15 @@ header {
     display: block;
     padding: 10px;
     color: var(--cor-texto);
-    font-family: var(--font-header);
+    font-family: var(--font-mono);
     font-weight: 700;
     letter-spacing: .1rem;
     text-transform: uppercase;
     font-size: .875rem;
+}
+
+@media (max-width: 800px) {
+    header {
+        grid-column: 1;
+    }
 }

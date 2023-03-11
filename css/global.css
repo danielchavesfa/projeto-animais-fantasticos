@@ -1,8 +1,15 @@
 :root {
     --bg-color: #f9f4eb;
     --bg-header: #fb5;
+
     --cor-texto: #222;
-    --font-header: 'IBM Plex Mono', monospace;
+    --cor-subtitulo: #e54;
+
+    --dec-subtitulo: #fb5;
+
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-titulo: 'Playfair Display SC', Georgia, serif;
+    --font-texto: Helvetica, Arial, sans-serif;
 }
 
 body, h1, h2, p, ul, li, dd, dt, dl {
@@ -25,7 +32,14 @@ a {
 
 body {
     -webkit-smoothing: antialiased;
+    background-color: var(--bg-color);
     color: var(--cor-texto);
     display: grid;
     grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+
+@media (max-width: 800px) {
+    body {
+        grid-template-columns: 1fr;
+    }
 }

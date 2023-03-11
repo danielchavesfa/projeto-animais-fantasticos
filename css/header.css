@@ -1,0 +1,27 @@
+header {
+    grid-column: 2/-1;
+}
+
+.menu {
+    background-color: var(--bg-header);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.menu > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.menu > ul a {
+    display: block;
+    padding: 10px;
+    color: var(--cor-texto);
+    font-family: var(--font-header);
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-size: .875rem;
+}

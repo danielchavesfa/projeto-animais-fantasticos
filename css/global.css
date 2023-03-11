@@ -1,0 +1,31 @@
+:root {
+    --bg-color: #f9f4eb;
+    --bg-header: #fb5;
+    --cor-texto: #222;
+    --font-header: 'IBM Plex Mono', monospace;
+}
+
+body, h1, h2, p, ul, li, dd, dt, dl {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    -webkit-smoothing: antialiased;
+    color: var(--cor-texto);
+    display: grid;
+    grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}

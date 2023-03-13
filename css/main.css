@@ -45,6 +45,7 @@
     grid-column: 2;
     overflow-y: scroll;
     height: 370px;
+    cursor: pointer;
 }
 
 .animais-galeria::-webkit-scrollbar {
@@ -64,6 +65,26 @@
 
 .grid-section .animais-conteudo {
     grid-column: 3;
+}
+
+.js .js-animais-conteudo section {
+    display: none;
+}
+
+.js .js-animais-conteudo section.ativo {
+    display: block;
+    animation: showContent .6s forwards;
+}
+
+@keyframes showContent {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0);
+    } 
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 .faq-lista {
@@ -151,7 +172,7 @@
 
     .grid-section .titulo {
         grid-column: 1 / -1;
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .animais {

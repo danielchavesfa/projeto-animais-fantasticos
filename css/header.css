@@ -17,7 +17,7 @@ header {
 
 .menu > ul a {
     display: block;
-    padding: 10px;
+    padding: 16px 10px;
     color: var(--cor-texto);
     font-family: var(--font-mono);
     font-weight: 700;

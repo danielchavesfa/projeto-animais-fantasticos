@@ -16,7 +16,7 @@
 <body>
 
     <header>
-        <nav class="menu js-menu">
+        <nav data-top="menu" class="menu js-menu">
             <ul>
                 <li><a href="#animais">Animais</a></li>
                 <li><a href="#faq">FAQ</a></li>
@@ -27,9 +27,9 @@
     </header>
 
     
-    <section class="grid-section animais js-scroll" id="animais">
+    <section data-anima="scroll" class="grid-section animais" id="animais">
         <h1 class="titulo">Animais Fantásticos</h1>
-        <ul class="animais-galeria js-animais-galeria">
+        <ul data-animais="galeria" class="animais-galeria">
             <li><img src="assets/img/imagem1.jpg" alt="Raposa"></li>
             <li><img src="assets/img/imagem2.jpg" alt="Esquilo"></li>
             <li><img src="assets/img/imagem3.jpg" alt="Urso"></li>
@@ -37,8 +37,8 @@
             <li><img src="assets/img/imagem5.jpg" alt="Macaco"></li>
             <li><img src="assets/img/imagem6.jpg" alt="Leão"></li>
         </ul>
-        <div class="animais-conteudo js-animais-conteudo">
-            <section class="raposa">
+        <div class="animais-conteudo" data-animais="conteudo">
+            <section data-anime="show-down" class="raposa">
                 <h2>Raposa</h2>
                 <p>Raposas são pequenos a médios mamíferos onívoros pertencentes a vários gêneros da família Canidae. As
                     raposas têm o crânio achatado, orelhas triangulares verticais, focinho pontiagudo e ligeiramente
@@ -56,7 +56,7 @@
                     raposa com matilhas de cães, há muito uma atividade estabelecida na Europa, especialmente nas Ilhas
                     Britânicas, foi exportada por colonos europeus para várias partes do Novo Mundo.</p>
             </section>
-            <section class="esquilo">
+            <section data-anime="show-right" class="esquilo">
                 <h2>Esquilo</h2>
                 <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida
                     como Sciuridae. No Brasil, são também conhecidos como serelepe, caxinguelê, caxinxe[1],
@@ -65,7 +65,7 @@
                     nas zonas de climas temperado ou tropical, mas também em algumas zonas de clima frio. Como todos os
                     roedores, possuem presas fortíssimas, com que roem facilmente sementes, principalmente bolotas.</p>
             </section>
-            <section class="urso">
+            <section data-anime="show-down" class="urso">
                 <h2>Urso</h2>
                 <p>Os Ursos (latim científico: Ursidae) constituem uma família de mamíferos plantígrados, geralmente de
                     grande porte, contendo os ursos e os pandas.</p>
@@ -80,7 +80,7 @@
                 <p>Os ursos existem em todos os continentes, em exceção na África, embora algumas fontes afirmem terem
                     avistado o Urso nandi, mas sem comprovarem a sua existência.</p>
             </section>
-            <section class="lobo">
+            <section data-anime="show-right" class="lobo">
                 <h2>Lobo</h2>
                 <p>O lobo (também chamado de lobo-cinzento; nome científico: Canis lupus) é uma espécie de mamífero
                     canídeo do gênero Canis. É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca
@@ -96,7 +96,7 @@
                     simensis) e o lobo-dourado (Canis anthus) são as únicas quatro espécies classificadas como lobos. Os
                     demais lobos correspondem a subespécies derivadas dessas quatro espécies.[5]</p>
             </section>
-            <section class="macaco">
+            <section data-anime="show-down" class="macaco">
                 <h2>Macaco</h2>
                 <p>Macaco é um termo de origem africana (provavelmente do banto makako)[1] utilizado como designação
                     comum a todas as espécies de símios ou primatas antropoides. É aplicada restritivamente no Brasil
@@ -113,7 +113,7 @@
                 <p>Ainda segundo Cunha,[4] o termo símio, que também designa os macacos (tendo sido registrado no
                     português dos séculos XVI e XVII), vem do latim simius, de simus, "que tem o nariz chato".</p>
             </section>
-            <section class="leao">
+            <section data-anime="show-right" class="leao">
                 <h2>Leão</h2>
                 <p>O leão [feminino: leoa] (nome científico: Panthera leo) é uma espécie de mamífero carnívoro do gênero
                     Panthera e da família Felidae. A espécie é atualmente encontrada na África subsaariana e na Ásia,
@@ -146,9 +146,9 @@
         </div>
     </section>
 
-    <section class="faq grid-section js-scroll" id="faq">
+    <section data-anima="scroll" class="faq grid-section" id="faq">
         <h1 class="titulo">FAQ</h1>
-        <dl class="faq-lista js-accordion">
+        <dl data-anima="accordion" class="faq-lista">
             <dt>Qual a idade dos animais?</dt>
             <dd>Varia de animal para animal.</dd>
 
@@ -163,7 +163,7 @@
         </dl>
     </section>
 
-    <section class="contato grid-section js-scroll" id="contato">
+    <section data-anima="scroll" class="contato grid-section" id="contato">
         <h1 class="titulo">Contato</h1>
         <div class="mapa">
             <img src="./assets/img/mapa.png" alt="Localização no mapa.">
@@ -182,6 +182,7 @@
         <span><small><em>Site recriado apenas para estudo por <strong><a href="https://github.com/danielchavesfa" rel="external noopener" target="_blank">Daniel Chaves</a></strong>.</em></small></span>
     </footer>
 
+    <script src="./js/exercicios.js"></script>
     <script src="./js/script.js"></script>
 
 </body>

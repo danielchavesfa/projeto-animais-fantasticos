@@ -1,8 +1,8 @@
 /* TAB MENU */
 
 function initTabMenu() {
-    const galeriaAnimais = document.querySelectorAll('.js .js-animais-galeria li');
-    const animaisConteudo = document.querySelectorAll('.js .js-animais-conteudo section');
+    const galeriaAnimais = document.querySelectorAll('.js [data-animais="galeria"] li');
+    const animaisConteudo = document.querySelectorAll('.js [data-animais="conteudo"] section');
     
     if(galeriaAnimais.length && animaisConteudo.length) {
         animaisConteudo[0].classList.add('ativo');
@@ -23,7 +23,7 @@ initTabMenu();
 /* ACCORDION LIST */
 
 function initAccordion(){
-    const dts = document.querySelectorAll('.js .js-accordion > dt');
+    const dts = document.querySelectorAll('.js [data-anima="accordion"] > dt');
     const ativo = 'ativo';
     
     if(dts.length) {
@@ -45,7 +45,7 @@ initAccordion();
 /* SCROLL SUAVE */
 
 function scrollSuave(){
-    const linksInternos = document.querySelectorAll('.js .js-menu a[href^="#"]');
+    const linksInternos = document.querySelectorAll('.js [data-top="menu"] a[href^="#"]');
     
     if(linksInternos.length) {
         linksInternos.forEach(link => {
@@ -67,33 +67,37 @@ function scrollSuave(){
 scrollSuave();
 
 /* ANIMAÇÃO DO SCROLL */
-const sections = document.querySelectorAll('.js .js-scroll');
 
-animaScroll();
-window.addEventListener('scroll', animaScroll);
+function initAnimaScroll() {
+    const sections = document.querySelectorAll('.js [data-anima="scroll"]');
 
-function animaScroll() {
-    sections.forEach(section => {
+    animaScroll();
+    window.addEventListener('scroll', animaScroll);
 
-        //pega a distância de cada section para o top do window
-        const sectionTop = section.getBoundingClientRect().top;
+    function animaScroll() {
+        sections.forEach(section => {
 
-        //pega 60% da altura da janela que em um monitor 1920x1080
-        //daria uma distância de 929px, 60% disso da 557.4px
-        const windowHeight = window.innerHeight * 0.6;
+            //pega a distância de cada section para o top do window
+            const sectionTop = section.getBoundingClientRect().top;
 
-        //faz um calculo entre a distância da section para o top
-        //menos 60% do tamanho da janela, e verifica ao atingir o
-        //limite de 0px
-        const verificarAtivacao = sectionTop - windowHeight < 0;
-        if(verificarAtivacao) {
+            //pega 60% da altura da janela que em um monitor 1920x1080
+            //daria uma distância de 929px, 60% disso da 557.4px
+            const windowHeight = window.innerHeight * 0.6;
 
-            //add classe ativo quando a section passar de -1px do top
-            section.classList.add('ativo');
-        } else {
-            
-            //remove a classe ativo quando a section passar de 0px do top
-            section.classList.remove('ativo');
-        }
-    });
+            //faz um calculo entre a distância da section para o top
+            //menos 60% do tamanho da janela, e verifica ao atingir o
+            //limite de 0px
+            const verificarAtivacao = sectionTop - windowHeight < 0;
+            if(verificarAtivacao) {
+
+                //add classe ativo quando a section passar de -1px do top
+                section.classList.add('ativo');
+            } else {
+                
+                //remove a classe ativo quando a section passar de 0px do top
+                section.classList.remove('ativo');
+            }
+        });
+    }
 }
+initAnimaScroll();

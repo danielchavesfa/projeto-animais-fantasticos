@@ -34,8 +34,6 @@ body {
     -webkit-smoothing: antialiased;
     background-color: var(--bg-color);
     color: var(--cor-texto);
-    display: grid;
-    grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
 }
 
 @media (max-width: 800px) {

@@ -1,0 +1,40 @@
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #e54;
+    border: 2px solid #333;
+    z-index: 1;
+}
+
+[data-top="dropdown"]:hover .dropdown-menu,
+[data-top="dropdown"].showDropdown .dropdown-menu {
+    display: block;
+    animation: slowDown .3s forwards;
+}
+
+@keyframes slowDown {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid #e54;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    top: -10px;
+}
+
+.dropdown-menu a:hover {
+    color: #fff;
+}

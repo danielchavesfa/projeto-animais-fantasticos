@@ -3,7 +3,7 @@ export default function outsideClick(element, events, callback) {
     const outside = 'data-outside';
     if(!element.hasAttribute(outside)) {
         events.forEach(thisEvent => {
-            html.addEventListener(thisEvent, handleOutsideClick);
+            setTimeout(() => html.addEventListener(thisEvent, handleOutsideClick)); 
         });
         element.setAttribute(outside, '');
     }

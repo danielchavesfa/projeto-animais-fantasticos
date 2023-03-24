@@ -28,6 +28,11 @@ header {
 
 @media (max-width: 800px) {
     header {
-        grid-column: 1;
+        grid-column: 1/-1;
+    }
+
+    .menu {
+        background-color: var(--bg-header);
+        margin-top: 0rem;
     }
 }

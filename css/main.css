@@ -119,6 +119,30 @@
     }
 }
 
+.numeros-grid {
+    grid-column: 2/-1;
+}
+
+.animal-num .numeros-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.numeros-animal h3 {
+    font-family: var(--font-titulo);
+    color: #222;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.numeros-animal span {
+    font-family: var(--font-mono);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--cor-subtitulo);
+}
+
 .faq-lista {
     grid-column: 2 / -1;
 }
@@ -254,8 +278,16 @@
 }
 
 @media (max-width: 800px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-section {
+        grid-template-columns: 90px 1fr;
+    }
+
     .grid-section, .copy {
-        grid-column: 1;
+        grid-column: 1/-1;
     }
 
     .grid-section .titulo {
@@ -277,11 +309,16 @@
         grid-column: 2;
     }
 
+    .numeros-grid {
+        grid-template-columns: 1fr !important;
+    }
+
     .contato {
         grid-template-columns: 1fr;
     }
 
     .contato .mapa {
         grid-column: 1;
+        max-width: 600px;
     }
 }

@@ -18,7 +18,8 @@
     <div data-main="container" class="main-container">
         <header>
             <nav data-top="menu" class="menu">
-                <ul>
+                <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+                <ul id="menu" data-menu="list">
                     <li><a href="#animais">Animais</a></li>
                     <li data-top="dropdown">
                         <a href="">Sobre</a>
@@ -142,6 +143,27 @@
                         diversas civilizações e culturas da Europa, Ásia e África. Está amplamente representado em
                         esculturas, pinturas, bandeiras nacionais, brasões, e em filmes e na literatura contemporâneos.</p>
                 </section>
+            </div>
+        </section>
+        <section data-anima="scroll" class="grid-section animal-num">
+            <h1 class="titulo">Números</h1>
+            <div class="numeros-grid">
+                <div class="numeros-animal">
+                    <h3>Lobos</h3>
+                    <span data-numero>4874</span>
+                </div>
+                <div class="numeros-animal">
+                    <h3>Raposas</h3>
+                    <span data-numero>6653</span>
+                </div>
+                <div class="numeros-animal">
+                    <h3>Esquilos</h3>
+                    <span data-numero>13523</span>
+                </div>
+                <div class="numeros-animal">
+                    <h3>Ursos</h3>
+                    <span data-numero>583</span>
+                </div>
             </div>
         </section>
         <section data-anima="scroll" class="faq grid-section" id="faq">

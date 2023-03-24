@@ -12,7 +12,7 @@
     --font-texto: Helvetica, Arial, sans-serif;
 }
 
-body, h1, h2, p, ul, li, dd, dt, dl {
+body, h1, h2, h3, p, ul, li, dd, dt, dl {
     margin: 0;
     padding: 0;
 }

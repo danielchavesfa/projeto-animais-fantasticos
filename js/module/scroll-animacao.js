@@ -22,7 +22,7 @@ export default function initAnimaScroll() {
 
                 //add classe ativo quando a section passar de -1px do top
                 section.classList.add('ativo');
-            } else {
+            } else if(section.classList.contains('ativo')) {
                 
                 //remove a classe ativo quando a section passar de 0px do top
                 section.classList.remove('ativo');

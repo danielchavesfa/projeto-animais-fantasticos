@@ -252,6 +252,21 @@
     color: var(--cor-texto);
 }
 
+[data-semana]::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 50%;
+    border: 2px solid #222;
+    margin-left: 6px;
+}
+
+[data-semana].aberto::after {
+    background-color: greenyellow;
+}
+
 .copy {
     grid-column: 3 / -1;
     padding: 10px;

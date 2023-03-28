@@ -6,14 +6,18 @@ export default function initFetchAnimais() {
     
     if(url && animaisGrid) {
         async function fetchAnimais(url) {
-            const animaisResponse = await fetch(url);
-            const animaisJSON = await animaisResponse.json();
-        
-            animaisJSON.forEach(animal => {
-                const animalContent = criarContainerAnimal(animal);
-                animaisGrid.appendChild(animalContent);
-            });
-            initAnimaNumeros();
+            try {
+                const animaisResponse = await fetch(url);
+                const animaisJSON = await animaisResponse.json();
+            
+                animaisJSON.forEach(animal => {
+                    const animalContent = criarContainerAnimal(animal);
+                    animaisGrid.appendChild(animalContent);
+                });
+                initAnimaNumeros();
+            } catch(error) {
+                console.log(new Error('Um erro inesperado aconteceu.\n' + error));
+            }
         }
         
         function criarContainerAnimal(animal) {

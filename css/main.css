@@ -252,6 +252,13 @@
     color: var(--cor-texto);
 }
 
+.contato-info .btc-valor {
+    padding: 4px 8px;
+    background-color: #1f4;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
 [data-semana]::after {
     content: '';
     display: inline-block;
@@ -264,7 +271,7 @@
 }
 
 [data-semana].aberto::after {
-    background-color: greenyellow;
+    background-color: #1f4;
 }
 
 .copy {

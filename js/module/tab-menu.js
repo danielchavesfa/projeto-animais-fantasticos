@@ -23,5 +23,6 @@ export default class TabMenu {
       this.tabMenu(0);
       this.addEventTabMenu();
     }
+    return this;
   }
 }

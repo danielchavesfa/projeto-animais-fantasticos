@@ -1,18 +1,27 @@
-export default function initTabMenu() {
-  const galeriaAnimais = document.querySelectorAll('.js [data-animais="galeria"] li');
-  const animaisConteudo = document.querySelectorAll('.js [data-animais="conteudo"] section');
-
-  function tabMenu(index) {
-    animaisConteudo.forEach((section) => section.classList.remove('ativo'));
-    animaisConteudo[index].classList.add('ativo');
+export default class TabMenu {
+  constructor(galeriaAnimais, animaisConteudo) {
+    this.galeriaAnimais = document.querySelectorAll(galeriaAnimais);
+    this.animaisConteudo = document.querySelectorAll(animaisConteudo);
+    this.activeClass = 'ativo';
   }
 
-  if (galeriaAnimais.length && animaisConteudo.length) {
-    animaisConteudo[0].classList.add('ativo');
-    galeriaAnimais.forEach((li, index) => {
+  addEventTabMenu() {
+    this.galeriaAnimais.forEach((li, index) => {
       li.addEventListener('click', () => {
-        tabMenu(index);
+        this.tabMenu(index);
       });
     });
+  }
+
+  tabMenu(index) {
+    this.animaisConteudo.forEach((section) => section.classList.remove(this.activeClass));
+    this.animaisConteudo[index].classList.add(this.activeClass);
+  }
+
+  init() {
+    if (this.galeriaAnimais.length && this.animaisConteudo.length) {
+      this.tabMenu(0);
+      this.addEventTabMenu();
+    }
   }
 }

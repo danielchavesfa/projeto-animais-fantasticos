@@ -8,7 +8,7 @@ import fetchBitcoins from './module/fetchBitcoins.js';
 import ScrollAnima from './module/scroll-anima.js';
 import DropdownMenu from './module/dropdown-menu.js';
 import MenuMobile from './module/menu-mobile.js';
-import initFuncionamento from './module/funcionamento.js';
+import Funcionamento from './module/funcionamento.js';
 
 const scrollSuave = new ScrollSuave('.js [data-top="menu"] a[href^="#"]');
 scrollSuave.init();
@@ -34,8 +34,9 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
+const funcionamento = new Funcionamento('[data-semana]', 'aberto');
+funcionamento.init();
+
 fetchAnimais('./assets/animaisapi.json', '.numeros-grid');
 
 fetchBitcoins('https://blockchain.info/ticker', '.btc-valor');
-
-initFuncionamento();

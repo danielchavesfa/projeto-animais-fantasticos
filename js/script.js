@@ -2,7 +2,7 @@ import ScrollSuave from './module/scroll-suave.js';
 import Accordion from './module/accordion.js';
 import TabMenu from './module/tab-menu.js';
 import Modal from './module/modal.js';
-import initTooltip from './module/tooltip.js';
+import Tooltip from './module/tooltip.js';
 import initDropdownMenu from './module/dropdown-menu.js';
 import initMenuMobile from './module/menu-mobile.js';
 import initFuncionamento from './module/funcionamento.js';
@@ -22,7 +22,9 @@ tabMenu.init();
 const modal = new Modal('[data-btn="login"]', '[data-main="container"]');
 modal.init();
 
-initTooltip();
+const toolTip = new Tooltip('[data-tooltip]');
+toolTip.init();
+
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();

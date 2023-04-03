@@ -1,4 +1,4 @@
-import initAnimaNumeros from './anima-numeros.js';
+import AnimaNumeros from './anima-numeros';
 
 export default function initFetchAnimais() {
   const animaisGrid = document.querySelector('.numeros-grid');
@@ -20,7 +20,8 @@ export default function initFetchAnimais() {
         const animalContent = criarContainerAnimal(animal);
         animaisGrid.appendChild(animalContent);
       });
-      initAnimaNumeros();
+      const animaNumeros = new AnimaNumeros('[data-numero]', '.animal-num', 'ativo');
+      animaNumeros.init();
     } catch (error) {
       console.log(new Error(`Um erro inesperado ocorreu: ${error}`));
     }

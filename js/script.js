@@ -3,11 +3,11 @@ import Accordion from './module/accordion.js';
 import TabMenu from './module/tab-menu.js';
 import Modal from './module/modal.js';
 import Tooltip from './module/tooltip.js';
+import fetchAnimais from './module/fetchAnimais.js';
+import fetchBitcoins from './module/fetchBitcoins.js';
 import initDropdownMenu from './module/dropdown-menu.js';
 import initMenuMobile from './module/menu-mobile.js';
 import initFuncionamento from './module/funcionamento.js';
-import fetchAnimais from './module/fetchAnimais.js';
-import initFetchBitcoins from './module/fetchBitcoins.js';
 import initAnimaScroll from './module/scroll-animacao.js';
 
 const scrollSuave = new ScrollSuave('.js [data-top="menu"] a[href^="#"]');
@@ -26,10 +26,10 @@ const toolTip = new Tooltip('[data-tooltip]');
 toolTip.init();
 
 fetchAnimais('./assets/animaisapi.json', '.numeros-grid');
-/* '.numeros-grid' */
+
+fetchBitcoins('https://blockchain.info/ticker', '.btc-valor');
 
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
-initFetchBitcoins();
 initAnimaScroll();

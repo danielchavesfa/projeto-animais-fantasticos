@@ -1,14 +1,14 @@
-export default function initFetchBitcoins() {
+export default function fetchBitcoins(url, target) {
   function pegarValorBitcoinEmReais(bitcoin) {
     return (1000 / bitcoin).toFixed(4);
   }
 
   function adicionarBitcoinNoDom(bitcoin) {
-    const btcValor = document.querySelector('.btc-valor');
+    const btcValor = document.querySelector(target);
     btcValor.textContent = bitcoin;
   }
 
-  async function fetchBitcoins(url) {
+  async function getFetchBitcoins() {
     try {
       const responseBitcoins = await fetch(url);
       const BitcoinsJSON = await responseBitcoins.json();
@@ -19,5 +19,5 @@ export default function initFetchBitcoins() {
     }
   }
 
-  fetchBitcoins('https://blockchain.info/ticker');
+  getFetchBitcoins(url);
 }

@@ -38,3 +38,10 @@
 .dropdown-menu a:hover {
     color: #fff;
 }
+
+@media (max-width: 800px) {
+    [data-top="dropdown"] .dropdown-menu {
+        display: block;
+        animation: slowDown .3s forwards;
+    }
+}

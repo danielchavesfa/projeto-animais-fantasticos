@@ -13,7 +13,8 @@ export default class MenuMobile {
     else this.events = events;
   }
 
-  mostrarMenu() {
+  mostrarMenu(event) {
+    event.preventDefault();
     this.menuList.classList.add(this.activeClass);
     this.btnMenu.classList.add(this.activeClass);
     this.btnMenu.setAttribute('aria-expanded', 'true');

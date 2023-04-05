@@ -9,7 +9,7 @@ export default class Modal {
     this.newModal.dataset.modal = 'container';
     this.newModal.classList.add('modal-container');
     this.newModal.innerHTML = `<div class="modal">
-                                  <button class="btn-fechar">X</button>
+                                  <button class="btn-fechar"></button>
                                   <form action="./" class="modal-form">
                                     <label for="email">Email</label>
                                     <input type="email" name="email" id="email">

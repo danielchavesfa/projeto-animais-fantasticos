@@ -331,8 +331,8 @@
         grid-column: 2;
     }
 
-    .numeros-grid {
-        grid-template-columns: 1fr !important;
+    .numeros-animal h3 {
+        font-size: 1.5rem;
     }
 
     .contato {
@@ -342,5 +342,17 @@
     .contato .mapa {
         grid-column: 1;
         max-width: 600px;
+    }
+}
+
+@media (max-width: 500px) {
+    .faq-lista {
+        grid-column: 1/-1;
+        padding-left: 10px;
+    }
+
+    .numeros-grid {
+        grid-column: 1/-1;
+        padding-left: 10px;
     }
 }
